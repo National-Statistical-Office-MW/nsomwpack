@@ -1,7 +1,7 @@
 Package: nsomwpack
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
+Title: A collection of Statistical, GIS and Demographic Tools
+Version: 1.1.0
 Authors@R: c(
     person(
       "Pachalo", "Chizala",
