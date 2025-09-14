@@ -102,6 +102,8 @@ nso_points_in_polygon <- function(nso_polygon, nso_points, ea_explore){
                          )
   }
 
+  results_df <- results_df |>
+    mutate(pcts_in = within_ea*100/total_pts)
 
   #cat(length(ea_codes), length(hh_no), length(points_within), length(coordinates_x), length(coordinates_y), length(hh_labels), length(distances_to_polygon))
   marked_points <- data.frame(ea_codes, hh_no, points_within,

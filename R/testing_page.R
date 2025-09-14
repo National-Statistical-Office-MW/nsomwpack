@@ -25,3 +25,5 @@ nso_points <- st_as_sf(nso_points, coords = c("hh_longitude", "hh_latitude"), cr
 
 
 
+
+ea_1_points <- nso_points_in_polygon(nso_polygon, nso_points,NA)
