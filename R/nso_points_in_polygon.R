@@ -90,7 +90,8 @@ nso_points_in_polygon <- function(nso_polygon, nso_points, ea_explore){
 
     # Extract hh_label and ea_code (assuming these are column names in your data)
     # Adjust column names if they're different in your actual data
-    hh_labels <- c(hh_labels, selected_ea_points$hh_label)
+
+    # hh_labels <- c(hh_labels, selected_ea_points$hh_label)
     ea_codes <- c(ea_codes, selected_ea_points$hh04)
 
     count_ea_40 <- sum(as.vector(lengths(st_within(selected_ea_points, selected_ea_poly))))
@@ -109,7 +110,7 @@ nso_points_in_polygon <- function(nso_polygon, nso_points, ea_explore){
   marked_points <- data.frame(ea_codes, hh_no, points_within,
                               #longitude = coordinates_x,
                               #latitude = coordinates_y,
-                              hh_label = hh_labels,
+                              #hh_label = hh_labels,
                               distance_to_polygon = distances_to_polygon)
 
   return(list(marked_points = marked_points, summary_pts = results_df))
